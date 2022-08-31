@@ -18,6 +18,7 @@ class Stack {
 
     push(value) {
         const newNode = new Node(value);
+        // could also check length for emtpy
         if (this.bottom === null) {
             this.top = newNode;
             this.bottom = newNode;
@@ -56,14 +57,23 @@ class Stack {
 }
 
 const myStack = new Stack();
-myStack.push("Google")
-console.log(myStack.peek())
-myStack.push("Udemy")
-console.log(myStack.peek())
-myStack.push("Discord")
-console.log(myStack.peek())
+// myStack.push("Google")
+// console.log(myStack.peek())
+// myStack.push("Udemy")
+// console.log(myStack.peek())
+// myStack.push("Discord")
+// console.log(myStack.peek())
 
-console.log(myStack.pop().value)
-console.log(myStack.pop().value)
-console.log(myStack.pop().value)
-console.log(myStack.isEmpty())
+// console.log(myStack.pop().value)
+// console.log(myStack.pop().value)
+// console.log(myStack.pop().value)
+// console.log(myStack.isEmpty())
+
+myStack.peek();
+myStack.push('google');
+myStack.push('udemy');
+myStack.push('discord');
+console.log(myStack.peek());
+console.log(myStack.pop());
+console.log(myStack.pop());
+console.log(myStack.pop());
