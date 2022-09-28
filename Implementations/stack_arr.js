@@ -5,42 +5,23 @@ class Node {
     }
   }
   
-  class Stack {
+class Stack {
     constructor(){
-      this.top = null;
-      this.bottom = null;
-      this.length = 0;
+        this.arr = []
     }
     peek() {
-      return this.top;
+        return this.arr[-1];
     }
     push(value){
-      const newNode = new Node(value);
-      if (this.length === 0) {
-        this.top = newNode;
-        this.bottom = newNode;
-      } else {
-        const holdingPointer = this.top;
-        this.top = newNode;
-        this.top.next = holdingPointer;
-      }
-      this.length++;
-      return this;
+        this.arr.push(value)
+        return this;
     }
     pop(){
-      if (!this.top) {
-        return null;
-      }
-      if (this.top === this.bottom) {
-        this.bottom = null;
-      }
-      const holdingPointer = this.top;
-      this.top = this.top.next;
-      this.length--;
-      return this;
+        this.arr.pop(value)
+        return this;
     }
-    //isEmpty
-  }
+//isEmpty
+}
   
   const myStack = new Stack();
   myStack.peek();
