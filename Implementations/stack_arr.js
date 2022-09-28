@@ -1,38 +1,36 @@
-class Node {
-    constructor(value){
-      this.value = value;
-      this.next = null;
-    }
-  }
-  
 class Stack {
     constructor(){
         this.arr = []
     }
     peek() {
-        return this.arr[-1];
+        return this.arr[this.arr.length-1];
     }
     push(value){
         this.arr.push(value)
         return this;
     }
     pop(){
-        this.arr.pop(value)
+        this.arr.pop()
         return this;
     }
 //isEmpty
 }
-  
-  const myStack = new Stack();
-  myStack.peek();
-  myStack.push('google');
-  myStack.push('udemy');
-  myStack.push('discord');
-  myStack.peek();
-  myStack.pop();
-  myStack.pop();
-  myStack.pop();
-  
+
+myStack = new Stack()
+myStack.peek();
+myStack.push('google');
+console.log(myStack.peek())
+myStack.push('udemy');
+console.log(myStack.peek())
+myStack.push('discord');
+console.log(myStack.peek())
+myStack.pop();
+console.log(myStack.peek())
+myStack.pop();
+console.log(myStack.peek())
+myStack.pop();
+console.log(myStack.peek())
+
   
   //Discord
   //Udemy
