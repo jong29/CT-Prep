@@ -17,8 +17,7 @@ insert(value){
     if (it === null) {
         this.root = nn;
         return;
-    } 
-    
+    }
     while(true){
         if (it.value < nn.value) {
             if(it.right === null){
@@ -39,7 +38,7 @@ insert(value){
 }
 lookup(value){
     //Code here
-    const it = this.root;
+    let it = this.root;
     while(true) {
         if (it === null) {
             return null;
@@ -57,14 +56,14 @@ lookup(value){
 
 const tree = new BinarySearchTree();
 tree.insert(9)
-console.log(tree)
 tree.insert(4)
 tree.insert(6)
 tree.insert(20)
 tree.insert(170)
 tree.insert(15)
 tree.insert(1)
-JSON.stringify(traverse(tree.root))
+console.log(JSON.stringify(traverse(tree.root)))
+console.log(tree.lookup(4));
 
 //     9
 //  4     20
