@@ -1,1 +1,1 @@
-myHashTable.get('apples')
+JSON.stringify(traverse(tree.root))
